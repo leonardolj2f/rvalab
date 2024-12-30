@@ -14,6 +14,7 @@ public class AvatarGuide : MonoBehaviour
     private NavMeshAgent agent; // Controle do movimento do avatar
     private int currentPoint = 0;
     private bool guiding = false;
+    private bool hasGuided = false; // Controle para evitar repetir a ação
 
     float rotationSpeed = 0.5f; // Velocidade de transição da rotação
     // Referência ao Animator do Avatar
@@ -37,15 +38,25 @@ public class AvatarGuide : MonoBehaviour
 
     void Update()
     {
+
+        StartGuidingIfPlayerIsClose();
+    }
+
+    private void StartGuidingIfPlayerIsClose()
+    {
+        if (hasGuided)
+            return; // Se já guiou, não faz nada
+
         if (!guiding && Vector3.Distance(player.position, transform.position) <= proximityRadius)
         {
-            guiding = true;
             StartCoroutine(GuideRoutine());
+            guiding = true;
         }
 
         // Atualiza a animação com base no movimento do avatar
         UpdateAnimation();
     }
+
 
     IEnumerator GuideRoutine()
     {
@@ -67,6 +78,8 @@ public class AvatarGuide : MonoBehaviour
             transform.rotation = Quaternion.Slerp(transform.rotation, initialPosition.rotation, rotationSpeed * Time.deltaTime);
             yield return null;
         }
+
+        hasGuided = true;
 
         // Finalizar o guia
         guiding = false;
