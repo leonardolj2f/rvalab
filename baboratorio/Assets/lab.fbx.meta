@@ -1,0 +1,369 @@
+fileFormatVersion: 2
+guid: b8ddcf35ef5dde84bb985d16f0bfac2a
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Armario
+    second: {fileID: 2100000, guid: a70bb6a50cb59fe42babdc9bc0c1533b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BOX4
+    second: {fileID: 2100000, guid: efb84c4c4d14d514bbdb645b32442517, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CAIXA NA Parede
+    second: {fileID: 2100000, guid: dafdef6690026324d9f9ad49bd7d84b8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CHAO
+    second: {fileID: 2100000, guid: ad170d1adc0ac214884b4aa61073b808, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.002
+    second: {fileID: 2100000, guid: 3ee2f57b8a034694fa0818ba8e6d48cf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.003
+    second: {fileID: 2100000, guid: 6b6d42d068736db478974a73b220535d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.004
+    second: {fileID: 2100000, guid: 4483eab78bb178543b72d27b197453ef, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Parede do avarar
+    second: {fileID: 2100000, guid: 89e846c16df5073419437b03f4f1b617, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Parede3
+    second: {fileID: 2100000, guid: adddb79b2b6437348951a0a5af27dd07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Teto
+    second: {fileID: 2100000, guid: 8df9007c126975f47afa47271be20f8a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Teto1
+    second: {fileID: 2100000, guid: c9bcf96e23a81644596920ca1e65bde3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: box3
+    second: {fileID: 2100000, guid: fee2543624674034ba004993b2985711, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: caixa quest pro
+    second: {fileID: 2100000, guid: 7e386b09802467145a17c940503713a9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fIRTS SCIFI BOX
+    second: {fileID: 2100000, guid: 32dba6b8c2df6ca4a88f697ee5fc60af, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: janelas
+    second: {fileID: 2100000, guid: e089fe7ce34e0794f9c0267b2653811f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: parede45
+    second: {fileID: 2100000, guid: 69f683327baf9bd49b2073d52a89e88c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: paredefundo
+    second: {fileID: 2100000, guid: 46d6c920af8118b48abb84145ca3176d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pilar1
+    second: {fileID: 2100000, guid: fbbf3aa56d68c9544acf731cf0ebf178, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pilar2
+    second: {fileID: 2100000, guid: 671cc9ac28ba0b84e9aeba8f3ebe09f0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: sofabake
+    second: {fileID: 2100000, guid: 963bd0a680e49cf44a6077c96b658293, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Armario
+    second: {fileID: 2800000, guid: e4f03f18392b654438e69bbafb0d2209, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: BAKEPAREDEFIX
+    second: {fileID: 2800000, guid: 296a1b212c773b94ebcf642c9dda2f44, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: BOX4_Base_color
+    second: {fileID: 2800000, guid: be8d1bc0e87c61d48894d8dd53d98f59, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: BOX4_Emissive
+    second: {fileID: 2800000, guid: 605027c3c21e1c44c9885775879a1445, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: BOX4_Metallic
+    second: {fileID: 2800000, guid: 0bf04ca6a0e22ae4998ab93f50b6f178, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: BOX4_Normal_DirectX
+    second: {fileID: 2800000, guid: b2e5131c933369f41acdb67c1c268a6a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: BOX4_Roughness
+    second: {fileID: 2800000, guid: 83ba48b3779712e42803985b7cdad46f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Bakechao2
+    second: {fileID: 2800000, guid: b3fdaca99d9443445825dddc99255a80, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: "Capture d\u2019\xE9cran 2024-12-20 233338"
+    second: {fileID: 2800000, guid: 2e9ba01d76703d5429bb6868804700ef, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: "Capture d\u2019\xE9cran 2024-12-21 001622"
+    second: {fileID: 2800000, guid: 64d42b79c4d799f45bce11d4a483d49d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: DefaultMaterial_Base_color
+    second: {fileID: 2800000, guid: 9296bf19a3098b6409c371503dd95bfc, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: DefaultMaterial_Emissive
+    second: {fileID: 2800000, guid: 41bbf9d82b5c30e42a2b7f79637416dc, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: DefaultMaterial_Metallic
+    second: {fileID: 2800000, guid: 50c5ccd04301a014ca976c1567d0bee9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: DefaultMaterial_Normal_DirectX
+    second: {fileID: 2800000, guid: 90301eff2a273c947a4248d1c1968f3a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: DefaultMaterial_Roughness
+    second: {fileID: 2800000, guid: 9a4331c7066c58847812faecbee62e67, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Parede3fix
+    second: {fileID: 2800000, guid: 5e6f6bbdf937acd4db1806452908f800, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Parede45
+    second: {fileID: 2800000, guid: 7ce1cbd959c9ad04fb2f49d2b2cd3bec, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ParedeAvatr2
+    second: {fileID: 2800000, guid: 8653947b9935def4fb02a70f14dfbc81, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: caixaparede
+    second: {fileID: 2800000, guid: d86665a2174b1c841bf3ff56b5b39d4b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: fIRTS SCIFI BOX_Base_color
+    second: {fileID: 2800000, guid: 941599eb3d93522489db9626052afd89, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: fIRTS SCIFI BOX_Emissive
+    second: {fileID: 2800000, guid: 7aa4ac1bac1114449825f13535634337, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: fIRTS SCIFI BOX_Metallic
+    second: {fileID: 2800000, guid: bdb4a6bbb28e9ba41b4c5c0dfe14c26b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: fIRTS SCIFI BOX_Normal_DirectX
+    second: {fileID: 2800000, guid: 47ff1792715f946448a9ecda9ae3f164, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: fIRTS SCIFI BOX_Roughness
+    second: {fileID: 2800000, guid: 19ff889a8334cea48a09f3a0c2ab0240, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: janelas
+    second: {fileID: 2800000, guid: 95d111bcf97cbcb40b321b95e440eaae, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: paredefundofix
+    second: {fileID: 2800000, guid: 72e82e4b848c43e4b9585027a262a325, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: pilar
+    second: {fileID: 2800000, guid: 485f10a41eb9dfb44a5281936f8834c7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: pilar.001
+    second: {fileID: 2800000, guid: 645ca1717c54a8848838d88f29556b81, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: questpro3-scaled
+    second: {fileID: 2800000, guid: 0f8a9f3d936f53f4fb4ca74260a6b838, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: sofabakefix
+    second: {fileID: 2800000, guid: 694f1ca25df8d46418f0586bb15748fe, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: teto
+    second: {fileID: 2800000, guid: 4379607f52edee44eae230ffbf0238b9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tetobake
+    second: {fileID: 2800000, guid: cb533b6bfd2baef4097a31464d1d9785, type: 3}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
