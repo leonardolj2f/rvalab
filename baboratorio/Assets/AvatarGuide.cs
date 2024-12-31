@@ -12,18 +12,27 @@ public class AvatarGuide : MonoBehaviour
     public Transform player; // Referência ao jogador (XR Rig)
     public float stopTime = 20f; // Tempo de pausa em cada ponto
     private NavMeshAgent agent; // Controle do movimento do avatar
+    private AudioSource audioSource; // Componente de áudio
     private int currentPoint = 0;
     private bool guiding = false;
     private bool hasGuided = false; // Controle para evitar repetir a ação
 
     float rotationSpeed = 0.5f; // Velocidade de transição da rotação
-    // Referência ao Animator do Avatar
-    private Animator animator;
+
+
+    public AudioClip introAudio; // Áudio de introdução
+    public AudioClip[] waypointAudios; // Áudios para cada waypoint
+
+
+
+    private Animator animator; // Referência ao Animator do Avatar
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        audioSource = GetComponent<AudioSource>();
         animator = GetComponent<Animator>(); // Obtém o Animator
+
 
         if (agent == null)
         {
@@ -60,13 +69,34 @@ public class AvatarGuide : MonoBehaviour
 
     IEnumerator GuideRoutine()
     {
+
+        // Reproduzir áudio de introdução
+        if (introAudio != null)
+        {
+            audioSource.clip = introAudio;
+            audioSource.Play();
+            yield return new WaitWhile(() => audioSource.isPlaying); // Esperar o áudio terminar
+        }
+
+
         // Mover entre os pontos principais
         for (int i = 0; i < keyPoints.Length; i++)
         {
             agent.SetDestination(keyPoints[i].position);
             yield return new WaitUntil(() => agent.remainingDistance <= agent.stoppingDistance);
-            yield return new WaitForSeconds(stopTime);
+            //yield return new WaitForSeconds(stopTime);
+
+            // Reproduzir áudio do waypoint, se existir
+            if (i < waypointAudios.Length && waypointAudios[i] != null)
+            {
+                audioSource.clip = waypointAudios[i];
+                audioSource.Play();
+                yield return new WaitWhile(() => audioSource.isPlaying); // Esperar o áudio terminar
+            }
+
+            yield return new WaitForSeconds(stopTime); // Esperar no waypoint
         }
+
 
         // Retornar ao ponto inicial
         agent.SetDestination(initialPosition.position);
