@@ -10,7 +10,7 @@ public class AvatarGuide : MonoBehaviour
 
     public float proximityRadius = 5f; // Raio de detecção do jogador
     public Transform player; // Referência ao jogador (XR Rig)
-    public float stopTime = 20f; // Tempo de pausa em cada ponto
+    public float stopTime = 2f; // Tempo de pausa em cada ponto
     private NavMeshAgent agent; // Controle do movimento do avatar
     private AudioSource audioSource; // Componente de áudio
     private int currentPoint = 0;
