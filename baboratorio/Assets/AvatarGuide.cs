@@ -22,7 +22,7 @@ public class AvatarGuide : MonoBehaviour
 
     public AudioClip introAudio; // Áudio de introdução
     public AudioClip[] waypointAudios; // Áudios para cada waypoint
-
+    public AudioSource footstepAudioSource; // Som de passos
 
 
     private Animator animator; // Referência ao Animator do Avatar
@@ -49,6 +49,8 @@ public class AvatarGuide : MonoBehaviour
     {
 
         StartGuidingIfPlayerIsClose();
+        HandleFootstepSound(); // Controlar som de passos
+
     }
 
     private void StartGuidingIfPlayerIsClose()
@@ -58,6 +60,7 @@ public class AvatarGuide : MonoBehaviour
 
         if (!guiding && Vector3.Distance(player.position, transform.position) <= proximityRadius)
         {
+            PlayWelcomeAnimation(); // Tocar animação de boas-vindas
             StartCoroutine(GuideRoutine());
             guiding = true;
         }
@@ -65,6 +68,32 @@ public class AvatarGuide : MonoBehaviour
         // Atualiza a animação com base no movimento do avatar
         UpdateAnimation();
     }
+
+    private void PlayWelcomeAnimation()
+    {
+        if (animator != null)
+        {
+            animator.SetTrigger("BoasVindas");
+        }
+    }
+
+    private void HandleFootstepSound()
+    {
+
+        footstepAudioSource.volume = Mathf.Clamp(agent.velocity.magnitude / rotationSpeed, 0.2f, 1.0f);
+
+        // Toca som de passos enquanto o agente está se movendo
+        if (agent.velocity.magnitude > 0.1f && !footstepAudioSource.isPlaying)
+        {
+            footstepAudioSource.Play();
+        }
+        else if (agent.velocity.magnitude <= 0.1f && footstepAudioSource.isPlaying)
+        {
+            footstepAudioSource.Pause();
+        }
+    }
+
+
 
 
     IEnumerator GuideRoutine()
@@ -83,7 +112,11 @@ public class AvatarGuide : MonoBehaviour
         for (int i = 0; i < keyPoints.Length; i++)
         {
             agent.SetDestination(keyPoints[i].position);
-            yield return new WaitUntil(() => agent.remainingDistance <= agent.stoppingDistance);
+
+            yield return new WaitUntil(() =>
+                !agent.pathPending && agent.remainingDistance <= agent.stoppingDistance);
+
+
             //yield return new WaitForSeconds(stopTime);
 
             // Reproduzir áudio do waypoint, se existir
@@ -100,7 +133,9 @@ public class AvatarGuide : MonoBehaviour
 
         // Retornar ao ponto inicial
         agent.SetDestination(initialPosition.position);
-        yield return new WaitUntil(() => agent.remainingDistance <= agent.stoppingDistance);
+        yield return new WaitUntil(() =>
+            !agent.pathPending && agent.remainingDistance <= agent.stoppingDistance);
+
 
         // Transição suave para a rotação inicial
         while (Quaternion.Angle(transform.rotation, initialPosition.rotation) > 1f)
