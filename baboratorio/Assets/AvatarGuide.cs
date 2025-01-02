@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Video;
 
 public class AvatarGuide : MonoBehaviour
 {
@@ -25,6 +26,10 @@ public class AvatarGuide : MonoBehaviour
     public AudioSource footstepAudioSource; // Som de passos
 
 
+    public GameObject[] videoObjects; // Objetos associados aos vídeos
+    public float videoActivationDistance = 3f; // Distância para ativar o Video Player
+
+
     private Animator animator; // Referência ao Animator do Avatar
 
     void Start()
@@ -33,6 +38,11 @@ public class AvatarGuide : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         animator = GetComponent<Animator>(); // Obtém o Animator
 
+        // Inicializa todos os Video Players como inativos
+        foreach (var videoObject in videoObjects)
+        {
+            videoObject.SetActive(false);
+        }
 
         if (agent == null)
         {
@@ -50,7 +60,7 @@ public class AvatarGuide : MonoBehaviour
 
         StartGuidingIfPlayerIsClose();
         HandleFootstepSound(); // Controlar som de passos
-
+        CheckVideoActivation();
     }
 
     private void StartGuidingIfPlayerIsClose()
@@ -93,7 +103,24 @@ public class AvatarGuide : MonoBehaviour
         }
     }
 
+    private void CheckVideoActivation()
+    {
+        if (!hasGuided)
+            return; // Só ativa os vídeos após o avatar terminar os waypoints
 
+        for (int i = 0; i < videoObjects.Length; i++)
+        {
+            // Ativar apenas quando o jogador estiver próximo
+            if (Vector3.Distance(player.position, videoObjects[i].transform.position) <= videoActivationDistance)
+            {
+                videoObjects[i].SetActive(true);
+            }
+            else
+            {
+                videoObjects[i].SetActive(false);
+            }
+        }
+    }
 
 
     IEnumerator GuideRoutine()
