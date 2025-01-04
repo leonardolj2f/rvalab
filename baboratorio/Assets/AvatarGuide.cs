@@ -131,7 +131,10 @@ public class AvatarGuide : MonoBehaviour
         {
             audioSource.clip = introAudio;
             audioSource.Play();
+            // Iniciar a animação de falar
+            //animator.SetTrigger("StartTalking");
             yield return new WaitWhile(() => audioSource.isPlaying); // Esperar o áudio terminar
+           // animator.SetTrigger("StopTalking");
         }
 
 
@@ -151,7 +154,11 @@ public class AvatarGuide : MonoBehaviour
             {
                 audioSource.clip = waypointAudios[i];
                 audioSource.Play();
+                animator.SetTrigger("StartTalking");
+
                 yield return new WaitWhile(() => audioSource.isPlaying); // Esperar o áudio terminar
+
+                animator.SetTrigger("StopTalking");
             }
 
             yield return new WaitForSeconds(stopTime); // Esperar no waypoint
