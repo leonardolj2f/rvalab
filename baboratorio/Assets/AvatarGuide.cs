@@ -184,6 +184,12 @@ public class AvatarGuide : MonoBehaviour
         guiding = false;
     }
 
+    public bool HasFinishedGuiding()
+    {
+        return hasGuided; // Retorna true se o avatar já terminou de guiar
+    }
+
+
     // Função que controla a animação do avatar
     void UpdateAnimation()
     {
