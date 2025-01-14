@@ -33,7 +33,7 @@ public class PortalEffect : MonoBehaviour
         }
 
         // Disparar evento háptico nos controladores
-        TriggerHapticFeedback(0.5f, 8f); // Intensidade e duração
+        TriggerHapticFeedback(0.5f, 16f); // Intensidade e duração
 
         // Esperar a duração do efeito do portal
         yield return new WaitForSeconds(portalDuration);
