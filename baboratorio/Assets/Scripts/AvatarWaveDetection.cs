@@ -11,11 +11,18 @@ public class AvatarWaveDetection : MonoBehaviour
     private AudioSource audioSource;
     private Animator animator;
     private bool hasWaved = false; // Evita saudações repetidas
+    private bool waypointsCompleted = false; // Flag para controlar quando os waypoints forem completados
 
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
+    }
+
+    // Chamada pelo script que controla os waypoints do avatar
+    public void OnWaypointsCompleted()
+    {
+        waypointsCompleted = true; // Marca que o avatar concluiu os waypoints
     }
 
     void Update()
@@ -32,6 +39,10 @@ public class AvatarWaveDetection : MonoBehaviour
         Vector3 leftHandPosition, rightHandPosition;
         bool leftHandAvailable = leftHandDevice.TryGetFeatureValue(CommonUsages.devicePosition, out leftHandPosition);
         bool rightHandAvailable = rightHandDevice.TryGetFeatureValue(CommonUsages.devicePosition, out rightHandPosition);
+
+        if (!waypointsCompleted || hasWaved)
+            return; // Só continua se os waypoints estiverem concluídos e ainda não tiver saudado
+
 
         if (!hasWaved && (leftHandAvailable || rightHandAvailable))
         {

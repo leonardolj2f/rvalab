@@ -9,7 +9,7 @@ public class AvatarGuide : MonoBehaviour
     public Transform initialPosition; // Posição inicial do avatar
     //private Quaternion initialRotation; // Rotação inicial do avatar
 
-    public float proximityRadius = 5f; // Raio de detecção do jogador
+    public float proximityRadius = 7f; // Raio de detecção do jogador
     public Transform player; // Referência ao jogador (XR Rig)
     public float stopTime = 2f; // Tempo de pausa em cada ponto
     private NavMeshAgent agent; // Controle do movimento do avatar
@@ -182,6 +182,8 @@ public class AvatarGuide : MonoBehaviour
 
         // Finalizar o guia
         guiding = false;
+        FindObjectOfType<AvatarWaveDetection>().OnWaypointsCompleted();
+
     }
 
     public bool HasFinishedGuiding()
